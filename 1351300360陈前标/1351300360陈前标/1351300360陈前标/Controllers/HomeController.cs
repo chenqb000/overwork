@@ -26,13 +26,18 @@ namespace _1351300360陈前标.Controllers
 
             return View();
         }
-        public ActionResult BolgIndex()
+        public ActionResult BolgIndex(string q)
         {
+            
             var db = new DB();
             db.Database.CreateIfNotExists();
-            var lst = db.BlogArticles.OrderByDescending(o => o.Id).ToList();
-            ViewBag.BlogArticles = lst;
-
+            var lst = db.BlogArticles.AsQueryable();
+            if (!string.IsNullOrWhiteSpace(q))
+        {
+                lst = lst.Where(o => o.Subject.Contains(q));
+        }
+            ViewBag.BlogArticles = lst.OrderByDescending(o => o.Id).ToList();
+            ViewBag.q = q;
             return View();
         }
         public ActionResult AddArticle()
