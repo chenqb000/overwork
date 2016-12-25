@@ -240,6 +240,7 @@
     <Content Include="Views\Home\AddArticle.cshtml" />
     <Content Include="Views\Home\BolgIndex.cshtml" />
     <Content Include="Views\Home\Show.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
