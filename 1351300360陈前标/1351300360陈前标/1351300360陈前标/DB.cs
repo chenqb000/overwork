@@ -16,6 +16,11 @@
         public virtual DbSet<BlogArticle> BlogArticles { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            var blogTable = modelBuilder.Entity<Blog>();
+            var blogArtticleTable = modelBuilder.Entity<BlogArticle>();
+            blogTable.HasKey(o => o.Id);
+            blogArtticleTable.HasKey(o => o.Id);
+            base.OnModelCreating(modelBuilder);
         }
 
  
