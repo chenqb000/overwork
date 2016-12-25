@@ -81,6 +81,16 @@ namespace _1351300360陈前标.Controllers
  
              return RedirectToAction("BolgIndex");
          }
+        public ActionResult Delete(int id)
+         {
+             var db = new DB();
+             var article = db.BlogArticles.First(o => o.Id == id);
+ 
+             db.BlogArticles.Remove(article);
+             db.SaveChanges();
+ 
+             return RedirectToAction("Index");
+         }
 
 
 
