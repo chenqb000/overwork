@@ -53,7 +53,14 @@ namespace _1351300360陈前标.Controllers
             
                         return Redirect("BolgIndex");
         }
-       
+        public ActionResult Show(int id)
+        {
+            var db = new DB();
+            var article = db.BlogArticles.First(o => o.Id == id);
 
-}
+            ViewData.Model = article;
+            return View();
+        }
+
+    }
 }
