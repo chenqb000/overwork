@@ -10,6 +10,7 @@
             {
                 <li>
                     <a href = "Home/Show/@item.Id"> @item.Subject </a>
+                    @Html.ActionLink("[  编辑  ]", "Edit", new { id = item.Id }) |   
                  </li>
              }
     
