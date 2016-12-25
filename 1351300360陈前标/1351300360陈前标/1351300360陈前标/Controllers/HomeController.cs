@@ -61,6 +61,17 @@ namespace _1351300360陈前标.Controllers
             ViewData.Model = article;
             return View();
         }
+        public ActionResult Edit(int id)
+        {
+            {
+                var db = new DB();
+                var article = db.BlogArticles.First(o => o.Id == id);
+                
+                ViewData.Model = article;
+                            return View();
+                        }
+            return View();
+        }
 
     }
 }
