@@ -12,9 +12,20 @@
         {
         }
 
-
+        public virtual DbSet<Blog> Blogs { get; set; }
+        public virtual DbSet<BlogArticle> BlogArticles { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         }
+
+ 
+    }
+
+    public class BlogArticle
+    {
+    }
+
+    public class Blog
+    {
     }
 }
