@@ -239,6 +239,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\AddArticle.cshtml" />
     <Content Include="Views\Home\BolgIndex.cshtml" />
+    <Content Include="Views\Home\Show.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
