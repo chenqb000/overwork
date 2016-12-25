@@ -40,6 +40,20 @@ namespace _1351300360陈前标.Controllers
 
             return View();
         }
-    
-    }
+        public ActionResult ArticleSave(string subject, string body)
+        {
+            var article = new BlogArticle();
+            article.Subject = subject;
+            article.Body = body;
+            article.DateCreated = DateTime.Now;
+            
+            var db = new DB();
+            db.BlogArticles.Add(article);
+            db.SaveChanges();
+            
+                        return Redirect("BolgIndex");
+        }
+       
+
+}
 }

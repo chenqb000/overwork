@@ -26,7 +26,7 @@
  
     }
 
-    public class BlogArticle
+    public class Blog
     {
         //id
         public int Id { get; set; }
@@ -34,7 +34,7 @@
         public string Title { get; set; }
     }
 
-    public class Blog
+    public class BlogArticle
     {
         public int Id { get; set; }
         public string Subject { get; set; }
