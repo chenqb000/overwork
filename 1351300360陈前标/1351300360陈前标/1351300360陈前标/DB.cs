@@ -23,9 +23,17 @@
 
     public class BlogArticle
     {
+        //id
+        public int Id { get; set; }
+        /// 博客
+        public string Title { get; set; }
     }
 
     public class Blog
     {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Body { get; set; }
+        public DateTime DateCreated { get; set; }
     }
 }
