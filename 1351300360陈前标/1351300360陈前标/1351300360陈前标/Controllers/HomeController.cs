@@ -28,6 +28,10 @@ namespace _1351300360陈前标.Controllers
         }
         public ActionResult BolgIndex()
         {
+            var db = new DB();
+            db.Database.CreateIfNotExists();
+            var lst = db.BlogArticles.OrderByDescending(o => o.Id).ToList();
+            ViewBag.BlogArticles = lst;
 
             return View();
         }
