@@ -26,5 +26,10 @@ namespace _1351300360陈前标.Controllers
 
             return View();
         }
+        public ActionResult AddArticle()
+        {
+
+            return View();
+        }
     }
 }
