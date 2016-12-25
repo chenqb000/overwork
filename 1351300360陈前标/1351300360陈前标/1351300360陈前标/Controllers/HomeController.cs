@@ -89,7 +89,7 @@ namespace _1351300360陈前标.Controllers
              db.BlogArticles.Remove(article);
              db.SaveChanges();
  
-             return RedirectToAction("Index");
+             return RedirectToAction("BolgIndex");
          }
 
 
